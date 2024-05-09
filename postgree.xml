@@ -215,7 +215,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1218" y="948" name="want_dog_future_form">
+<table x="1193" y="941" name="want_dog_future_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -223,26 +223,8 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="commom_form" row="id" />
 </row>
-<row name="imaginary_dog_gate" null="1" autoincrement="0">
-<datatype>VARCHAR(20)</datatype>
-<default>NULL</default></row>
-<row name="imaginary_dog_coat" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="imaginary_dog_color" null="1" autoincrement="0">
-<datatype>VARCHAR(30)</datatype>
-<default>NULL</default></row>
-<row name="imaginary_dog_sex" null="1" autoincrement="0">
-<datatype>VARCHAR(20)</datatype>
-<default>NULL</default></row>
-<row name="imaginary_dog_breed" null="1" autoincrement="0">
-<datatype>VARCHAR(30)</datatype>
-<default>NULL</default></row>
 <row name="why_would_like_dog" null="1" autoincrement="0">
 <datatype>VARCHAR(150)</datatype>
-<default>NULL</default></row>
-<row name="imaginary_dog_name" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <row name="imaginary_dog_name_reason" null="1" autoincrement="0">
 <datatype>VARCHAR(150)</datatype>
@@ -252,9 +234,6 @@
 <default>NULL</default></row>
 <row name="when_will_buy" null="1" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="would_prefer_personality" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
 <default>NULL</default></row>
 <row name="average_mensal_costs" null="1" autoincrement="0">
 <datatype>VARCHAR(150)</datatype>
@@ -337,7 +316,7 @@
 <part>why_adquired</part>
 </key>
 </table>
-<table x="1234" y="1324" name="dont_want_dog_future_form">
+<table x="966" y="1319" name="dont_want_dog_future_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -451,7 +430,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="1585.2120971679688" y="1073.1514892578125" name="reasons_future">
+<table x="1423.2120971679688" y="1203.1514892578125" name="reasons_future">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -481,6 +460,39 @@
 <datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
 <row name="others" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1437" y="926" name="imaginary_dog">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_want_dog_future_form" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="want_dog_future_form" row="id" />
+</row>
+<row name="dog_gate" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="dog_coat" null="1" autoincrement="0">
+<datatype>INTEGER(50)</datatype>
+<default>NULL</default></row>
+<row name="dog_color" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="dog_sex" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="dog_breed" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="dog_name" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="personalities_would_like" null="1" autoincrement="0">
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">

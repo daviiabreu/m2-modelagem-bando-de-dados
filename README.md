@@ -1,5 +1,3 @@
-```markdown
-
 ## Documentação do Modelo Relacional
 
 **Projeto:** Abandono Zero
@@ -13,6 +11,13 @@
 ## Introdução
 
 Este documento descreve o modelo relacional simplificado para o projeto Abandono Zero, que visa coletar e gerenciar informações sobre usuários e suas relações com cães para analisar esses dados e poder ter base para um estudo sobre o abandono de cães.
+
+## Prints
+
+![alt text](images/image.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
 
 ## Entidades
 
@@ -49,5 +54,8 @@ Este documento descreve o modelo relacional simplificado para o projeto Abandono
 
 Este modelo relacional simplificado oferece uma estrutura clara e organizada para gerenciar as informações dos usuários e suas relações com cães no projeto Abandono Zero. É importante seguir as boas práticas de desenvolvimento de banco de dados durante a implementação deste modelo para garantir a integridade e a confiabilidade dos dados.
 
-```
-Este documento oferece uma visão clara e abrangente do modelo relacional, suas entidades, relacionamentos
+**Observações:**
+
+- Este modelo é uma versão simplificada e pode ser adaptado às necessidades específicas do projeto.
+- É importante documentar detalhadamente o modelo relacional para facilitar o entendimento e a manutenção do sistema.
+- A implementação do modelo relacional deve seguir boas práticas de desenvolvimento de banco de dados.

@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="307" y="515" name="commom_form">
+</datatypes><table x="464" y="1144" name="commom_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -58,7 +58,7 @@
 <datatype>VARCHAR(30)</datatype>
 <default>NULL</default></row>
 <row name="house_type" null="1" autoincrement="0">
-<datatype>VARCHAR(40)</datatype>
+<datatype>VARCHAR(30)</datatype>
 <default>NULL</default></row>
 <row name="family_composition" null="1" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
@@ -83,29 +83,10 @@
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
+<part>house_type</part>
 </key>
 </table>
-<table x="88" y="548" name="users">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="email" null="1" autoincrement="0">
-<datatype>VARCHAR(80)</datatype>
-<default>NULL</default></row>
-<row name="password" null="1" autoincrement="0">
-<datatype>INTEGER(50)</datatype>
-<default>NULL</default></row>
-<row name="register_date" null="1" autoincrement="0">
-<datatype>INTEGER(15)</datatype>
-<default>NULL</default></row>
-<row name="role" null="1" autoincrement="0">
-<datatype>VARCHAR(30)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="648" y="157" name="past_form">
+<table x="993" y="498" name="past_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -126,7 +107,115 @@
 <part>id</part>
 </key>
 </table>
-<table x="828" y="681" name="want_dog_future_form">
+<table x="674" y="1576" name="present_form">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_commom_form" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="commom_form" row="id" />
+</row>
+<row name="has_other_dogs" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="has_other_cats" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="had_other_dogs_couldnt_keep" null="1" autoincrement="0">
+<datatype>VARCHAR(300)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="931" y="1549" name="present_dog">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_present_form" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="present_form" row="id" />
+</row>
+<row name="present_dog_name" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="present_dog_sex" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="who_tutor" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="present_dog_neutered" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="time_with_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="first_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(40)</datatype>
+<default>NULL</default></row>
+<row name="dog_age" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="breed" null="1" autoincrement="0">
+<datatype>VARCHAR(40)</datatype>
+<default>NULL</default></row>
+<row name="where_adquired_it" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="much_paid_for_it" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<row name="age_dog_when_got_it" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="dog_personality" null="1" autoincrement="0">
+<datatype>VARCHAR(150)</datatype>
+<default>NULL</default></row>
+<row name="why_have_this_dog" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="present_dog_traits_you_like" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="who_involved_dog_decision" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="went_vet" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="vet_times" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="what_say_others_willing_addopt_your_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+<part>why_have_this_dog</part>
+</key>
+</table>
+<table x="247" y="1150" name="users">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="email" null="1" autoincrement="0">
+<datatype>VARCHAR(80)</datatype>
+<default>NULL</default></row>
+<row name="password" null="1" autoincrement="0">
+<datatype>INTEGER(50)</datatype>
+<default>NULL</default></row>
+<row name="register_date" null="1" autoincrement="0">
+<datatype>INTEGER(15)</datatype>
+<default>NULL</default></row>
+<row name="role" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1218" y="948" name="want_dog_future_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -172,30 +261,10 @@
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
+<part>why_would_like_dog</part>
 </key>
 </table>
-<table x="588" y="1248" name="present_form">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_commom_form" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="commom_form" row="id" />
-</row>
-<row name="has_other_dogs" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="has_other_cats" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="had_other_dogs_couldnt_keep" null="1" autoincrement="0">
-<datatype>VARCHAR(300)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="924" y="36" name="past_dog">
+<table x="1197" y="264" name="past_dog">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -265,9 +334,10 @@
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
+<part>why_adquired</part>
 </key>
 </table>
-<table x="809" y="1052" name="dont_want_dog_future_form">
+<table x="1234" y="1324" name="dont_want_dog_future_form">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -282,66 +352,135 @@
 <part>id</part>
 </key>
 </table>
-<table x="865" y="1264" name="present_dog">
+<table x="1283" y="1816" name="reasons_has">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="id_present_form" null="1" autoincrement="0">
+<row name="why_have_this_dog_present_dog" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="present_form" row="id" />
+<default>NULL</default><relation table="present_dog" row="why_have_this_dog" />
 </row>
-<row name="present_dog_name" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
+<row name="children" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="present_dog_sex" null="1" autoincrement="0">
-<datatype>VARCHAR(30)</datatype>
+<row name="adults" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="who_tutor" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
+<row name="looking" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="present_dog_neutered" null="1" autoincrement="0">
-<datatype>VARCHAR(30)</datatype>
+<row name="other_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="time_with_dog" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
+<row name="responsability_to_children" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="first_dog" null="1" autoincrement="0">
-<datatype>VARCHAR(40)</datatype>
+<row name="friends_had" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="dog_age" null="1" autoincrement="0">
+<row name="home_protection" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="help_friend" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="save_his_life" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="was_cute" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="he_chose_me" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="gift" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="others" null="1" autoincrement="0">
+<datatype>VARCHAR(1000)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1513.6666870117188" y="497" name="reasons_adquired">
+<row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="breed" null="1" autoincrement="0">
-<datatype>VARCHAR(40)</datatype>
+<row name="why_adquired_past_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><relation table="past_dog" row="why_adquired" />
+</row>
+<row name="children" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="where_adquired_it" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="paid_for_it" null="1" autoincrement="0">
+<row name="adults" null="1" autoincrement="0">
 <datatype>VARCHAR(30)</datatype>
 <default>NULL</default></row>
-<row name="age_dog_when_got_it" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<row name="appearence" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="dog_personality" null="1" autoincrement="0">
-<datatype>VARCHAR(150)</datatype>
+<row name="other_dog" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
 <default>NULL</default></row>
-<row name="why_have_this_dog" null="1" autoincrement="0">
+<row name="teach_children_responsabilities" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="friends_had" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="house_protection" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="help_friend" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="save_his_life" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="cute" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="gift" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="others" null="1" autoincrement="0">
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default></row>
-<row name="present_dog_traits_you_like" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="who_involved_dog_decision" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="went_vet" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<row name="vet_times" null="1" autoincrement="0">
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1585.2120971679688" y="1073.1514892578125" name="reasons_future">
+<row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="what_say_others_willing_addopt_your_dog" null="1" autoincrement="0">
+<row name="why_would_like_dog_want_dog_future_form" null="1" autoincrement="0">
+<datatype>VARCHAR(150)</datatype>
+<default>NULL</default><relation table="want_dog_future_form" row="why_would_like_dog" />
+</row>
+<row name="children_company" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="adults_company" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="parents_have" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="teach_children_responsabilitires" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="friends_have" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="house_protection" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="tv_social_midia" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default></row>
+<row name="others" null="1" autoincrement="0">
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">

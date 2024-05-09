@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: http://10.150.8.228:8080/ -->
+<!-- Active URL: http://10.254.16.108:8080/ -->
 <sql>
 <datatypes db="postgresql">
 	<group label="Numeric" color="rgb(238,238,170)">
@@ -138,7 +138,7 @@
 <datatype>VARCHAR(20)</datatype>
 <default>NULL</default></row>
 <row name="imaginary_dog_coat" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<datatype>VARCHAR(50)</datatype>
 <default>NULL</default></row>
 <row name="imaginary_dog_color" null="1" autoincrement="0">
 <datatype>VARCHAR(30)</datatype>
@@ -203,8 +203,8 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="past_form" row="id" />
 </row>
-<row name="pas_dog_name" null="1" autoincrement="0">
-<datatype>INTEGER(30)</datatype>
+<row name="dog_name" null="1" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
 <default>NULL</default></row>
 <row name="who_was_the_tutor" null="1" autoincrement="0">
 <datatype>VARCHAR(30)</datatype>
@@ -237,7 +237,7 @@
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default></row>
 <row name="personalities_why_keeping" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<datatype>VARCHAR(150)</datatype>
 <default>NULL</default></row>
 <row name="people_in_name_decision" null="1" autoincrement="0">
 <datatype>VARCHAR(30)</datatype>
@@ -258,10 +258,10 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="age_when_left" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
+<datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="why_left" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<datatype>VARCHAR(100)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -342,7 +342,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="what_say_others_willing_addopt_your_dog" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<datatype>VARCHAR(200)</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
